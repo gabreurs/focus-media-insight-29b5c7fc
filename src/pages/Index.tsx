@@ -266,29 +266,28 @@ const HeroSlide = () => {
 };
 
 /* ============================================================ */
-/* 02 — Transição Maio → Junho                                   */
+/* 02 — Resumo do calendário                                     */
 /* ============================================================ */
 
 const TransicaoSlide = ({ index, total }: { index: number; total: number }) => {
   const isDesktop = useIsDesktop();
   return (
-    <ContentSlide index={index} total={total} label="Maio → Junho">
+    <ContentSlide index={index} total={total} label="Resumo do calendário">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-0 translate-x-1/3 h-[55vw] w-[55vw] max-h-[640px] max-w-[640px] rounded-full bg-mineral/[0.04] blur-[140px]" />
       </div>
 
-      <SectionTitle accent="entra em circulação.">
-        Junho coloca a Focus
+      <SectionTitle accent="copy, arte e calendário fechados.">
+        Quatorze publicações,
       </SectionTitle>
 
       <p className="text-caption text-sm max-w-2xl mt-6 md:mt-8 leading-relaxed">
-        Maio entregou apresentação, narrativa e contexto de mercado. Junho
-        traduz isso em rotina editorial — publicações datadas, copy aprovável
-        e produção pronta para sair.
+        Cada peça tem data definida, público-alvo, formato, objetivo e copy
+        finalizada. O calendário está pronto para aprovação e produção.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 mt-12 md:mt-20 max-w-5xl">
-        {/* Maio — concluído */}
+        {/* Entregáveis do calendário */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -297,33 +296,33 @@ const TransicaoSlide = ({ index, total }: { index: number; total: number }) => {
           className="border-t border-border/60 pt-6"
         >
           <div className="flex items-baseline justify-between mb-5">
-            <span className="font-editorial text-caption">Maio 2026 — concluído</span>
-            <span className="block w-6 h-px bg-caption/40" />
+            <span className="font-editorial text-off-white">O que está no calendário</span>
+            <span className="block w-6 h-px bg-off-white/60" />
           </div>
           <ul className="space-y-3">
-            {maioConcluido.map((it) => (
-              <li key={it} className="flex gap-3 text-foreground/50 text-sm leading-relaxed">
-                <span className="mt-2.5 w-2 h-px bg-caption/40 shrink-0" />
-                <span className="line-through decoration-caption/30">{it}</span>
+            {entregaveisCalendario.map((it) => (
+              <li key={it} className="flex gap-3 text-foreground/85 text-sm md:text-[0.95rem] leading-relaxed">
+                <span className="mt-2.5 w-2 h-px bg-off-white/60 shrink-0" />
+                <span>{it}</span>
               </li>
             ))}
           </ul>
         </motion.div>
 
-        {/* Junho — em execução */}
+        {/* Públicos e formatos */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.3 }}
-          className="border-t border-off-white/40 pt-6"
+          className="border-t border-border/60 pt-6"
         >
           <div className="flex items-baseline justify-between mb-5">
-            <span className="font-editorial text-off-white">Junho 2026 — em execução</span>
+            <span className="font-editorial text-off-white">Públicos e formatos</span>
             <span className="block w-6 h-px bg-off-white/60" />
           </div>
           <ul className="space-y-3">
-            {junhoEmExecucao.map((it) => (
+            {formatosEPublicos.map((it) => (
               <li key={it} className="flex gap-3 text-foreground/85 text-sm md:text-[0.95rem] leading-relaxed">
                 <span className="mt-2.5 w-2 h-px bg-off-white/60 shrink-0" />
                 <span>{it}</span>
