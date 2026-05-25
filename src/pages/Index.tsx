@@ -6,8 +6,8 @@ import SlideNav from "@/components/focus/SlideNav";
 import {
   slides,
   heroMetrics,
-  maioConcluido,
-  junhoEmExecucao,
+  entregaveisCalendario,
+  formatosEPublicos,
   pillars,
   seasonalSelected,
   publications,

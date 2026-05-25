@@ -83,7 +83,7 @@ export interface Publication {
 
 export const slides = [
   { id: "abertura", label: "Abertura" },
-  { id: "transicao", label: "Maio → Junho" },
+  { id: "transicao", label: "Resumo do calendário" },
   { id: "pilares", label: "Pilares editoriais" },
   { id: "sazonais", label: "Oportunidades sazonais" },
   { id: "calendario", label: "Calendário editorial" },
@@ -114,21 +114,21 @@ export const heroMetrics = [
 ];
 
 /* ------------------------------------------------------------ */
-/* Transição Maio → Junho                                        */
+/* Resumo do calendário                                          */
 /* ------------------------------------------------------------ */
 
-export const maioConcluido = [
-  "Apresentação da Focus Media Brasil",
-  "Estabelecimento da narrativa de mercado",
-  "Autoridade e contextualização da oferta",
-  "Abertura do diálogo comercial",
+export const entregaveisCalendario = [
+  "14 publicações distribuídas em cinco semanas",
+  "Copy finalizada: artwork, legenda, CTA e hashtags",
+  "Conceitos visuais para posts, carrosséis e reels",
+  "Datas sazonais selecionadas por relevância real",
 ];
 
-export const junhoEmExecucao = [
-  "14 publicações completas e publicáveis",
-  "Copy finalizado: artwork, legenda, CTA e hashtags",
-  "Datas sazonais filtradas por relevância real",
-  "Dois públicos-alvo: condomínios e anunciantes",
+export const formatosEPublicos = [
+  "Síndicos e administradoras: comunicação para condomínios",
+  "Marcas e agências: presença comercial e mídia indoor",
+  "Posts estáticos, carrosséis e conceitos de reels",
+  "Dois públicos distintos em peças estratégicas separadas",
 ];
 
 /* ------------------------------------------------------------ */
