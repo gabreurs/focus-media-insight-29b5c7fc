@@ -10,7 +10,6 @@ import {
   junhoEmExecucao,
   pillars,
   seasonalSelected,
-  seasonalExcluded,
   publications,
   WEEKS,
   type Publication,
