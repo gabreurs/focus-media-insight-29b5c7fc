@@ -160,9 +160,9 @@ export const pillars: Pillar[] = [
       "Visibilidade repetida e contextual nos caminhos que o público já percorre todos os dias na vida urbana.",
     audience: "Marcas e agências.",
     examples: [
-      "O elevador não é intervalo — é parte da rotina",
-      "Por que frequência importa mais do que alcance único",
-      "Mídia que acompanha sem interromper",
+      "Onde o público passa — todos os dias, várias vezes",
+      "Frequência diária supera alcance pontual",
+      "Mídia que acompanha sem disputar atenção",
     ],
   },
   {
