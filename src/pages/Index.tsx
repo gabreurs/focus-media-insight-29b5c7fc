@@ -111,10 +111,9 @@ const ContentSlide = ({
       <div
         className={`relative z-10 flex-1 min-h-0 flex flex-col ${
           scrollable
-            ? "overflow-y-auto md:overflow-y-auto md:[scrollbar-width:thin] pr-1"
+            ? "justify-center md:overflow-hidden"
             : "justify-center md:overflow-hidden"
         }`}
-        style={scrollable ? { scrollbarWidth: "thin" } : undefined}
       >
         {children}
       </div>
