@@ -10,7 +10,6 @@ import {
   junhoEmExecucao,
   pillars,
   seasonalSelected,
-  seasonalExcluded,
   publications,
   WEEKS,
   type Publication,
@@ -278,16 +277,17 @@ const TransicaoSlide = ({ index, total }: { index: number; total: number }) => {
         <div className="absolute top-1/3 right-0 translate-x-1/3 h-[55vw] w-[55vw] max-h-[640px] max-w-[640px] rounded-full bg-mineral/[0.04] blur-[140px]" />
       </div>
 
-      <SectionTitle accent="é continuidade.">
-        Junho não é recomeço,
+      <SectionTitle accent="entra em circulação.">
+        Junho coloca a Focus
       </SectionTitle>
 
-      <p className="text-caption text-sm max-w-2xl mt-5 md:mt-6">
-        O ciclo de maio entregou apresentação e contexto. Junho desdobra essa
-        chegada em conteúdo publicável, recorrente e operacional.
+      <p className="text-caption text-sm max-w-2xl mt-6 md:mt-8 leading-relaxed">
+        Maio entregou apresentação, narrativa e contexto de mercado. Junho
+        traduz isso em rotina editorial — publicações datadas, copy aprovável
+        e produção pronta para sair.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mt-10 md:mt-14 max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 mt-12 md:mt-20 max-w-5xl">
         {/* Maio — concluído */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -342,14 +342,16 @@ const TransicaoSlide = ({ index, total }: { index: number; total: number }) => {
 
 const PilaresSlide = ({ index, total }: { index: number; total: number }) => (
   <ContentSlide index={index} total={total} label="Pilares editoriais" scrollable>
-    <SectionTitle accent="que estruturam o mês.">Seis pilares</SectionTitle>
+    <SectionTitle accent="organiza a comunicação de junho.">
+      Seis pilares,
+    </SectionTitle>
 
-    <p className="text-caption text-sm max-w-xl mt-5">
-      Cada publicação de junho está ancorada em um pilar editorial — definindo
-      audiência, tom e o tipo de conversa que estabelece.
+    <p className="text-caption text-sm max-w-xl mt-6 md:mt-8 leading-relaxed">
+      Cada publicação responde a um pilar — que define a audiência primária,
+      o tom da mensagem e o papel da peça no mês.
     </p>
 
-    <div className="mt-8 md:mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 max-w-7xl pb-8">
+    <div className="mt-12 md:mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 max-w-7xl pb-8">
       {pillars.map((p, i) => (
         <motion.div
           key={p.name}
@@ -393,19 +395,19 @@ const PilaresSlide = ({ index, total }: { index: number; total: number }) => (
 
 const SazonaisSlide = ({ index, total }: { index: number; total: number }) => (
   <ContentSlide index={index} total={total} label="Oportunidades sazonais" scrollable>
-    <SectionTitle accent="o que ficou de fora.">
-      Filtragem editorial:
+    <SectionTitle accent="com vínculo real ao negócio.">
+      Oito datas
     </SectionTitle>
 
-    <p className="text-caption text-sm max-w-2xl mt-5">
-      Nem toda data do calendário gera conteúdo relevante. Junho passou por
-      curadoria — só permaneceram datas com vínculo natural à Focus Media.
+    <p className="text-caption text-sm max-w-2xl mt-6 md:mt-8 leading-relaxed">
+      A curadoria de junho priorizou datas que conversam diretamente com
+      edifícios, mídia indoor e a rotina urbana — descartando oportunismo de
+      calendário.
     </p>
 
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mt-10 md:mt-12 pb-8 max-w-7xl">
-      {/* Selecionadas */}
+    <div className="mt-12 md:mt-16 pb-8 max-w-5xl">
       <div>
-        <div className="flex items-baseline justify-between mb-4">
+        <div className="flex items-baseline justify-between mb-6">
           <span className="font-editorial text-off-white">Datas selecionadas — 08</span>
           <span className="block w-6 h-px bg-off-white/60" />
         </div>
@@ -430,35 +432,6 @@ const SazonaisSlide = ({ index, total }: { index: number; total: number }) => (
             </motion.li>
           ))}
           <div className="border-t border-border/60" />
-        </ul>
-      </div>
-
-      {/* Não priorizadas */}
-      <div>
-        <div className="flex items-baseline justify-between mb-4">
-          <span className="font-editorial text-caption">Avaliadas e não priorizadas — 06</span>
-          <span className="block w-6 h-px bg-caption/40" />
-        </div>
-        <ul>
-          {seasonalExcluded.map((d, i) => (
-            <motion.li
-              key={d.date}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.04 }}
-              viewport={{ once: true, amount: 0.2 }}
-              className="border-t border-border/40 py-4 grid grid-cols-12 gap-3 opacity-55"
-            >
-              <div className="col-span-3 md:col-span-2">
-                <div className="font-display-light text-foreground/70 tabular-nums text-base md:text-lg">{d.date}</div>
-              </div>
-              <div className="col-span-9 md:col-span-10">
-                <div className="text-foreground/70 text-sm mb-1">{d.occasion}</div>
-                <p className="text-caption text-xs md:text-sm leading-relaxed">{d.reason}</p>
-              </div>
-            </motion.li>
-          ))}
-          <div className="border-t border-border/40" />
         </ul>
       </div>
     </div>
@@ -674,14 +647,14 @@ const CalendarioSlide = ({ index, total }: { index: number; total: number }) => 
 
   return (
     <ContentSlide index={index} total={total} label="Calendário editorial" scrollable>
-      <SectionTitle accent="14 publicações.">
-        Junho em
+      <SectionTitle accent="cinco semanas, calendário fechado.">
+        Quatorze publicações,
       </SectionTitle>
 
-      <p className="text-caption text-sm max-w-2xl mt-5">
-        Cada card abre o conteúdo completo da publicação — texto do artwork,
-        slides, roteiro, legenda, CTA e hashtags. Pronto para aprovação e
-        execução.
+      <p className="text-caption text-sm max-w-2xl mt-6 md:mt-8 leading-relaxed">
+        Cada card abre o material completo da peça — artwork, roteiro de
+        carrossel ou reels, legenda, CTA e hashtags. Pronto para aprovação
+        e produção.
       </p>
 
       {/* Tabs por semana */}
@@ -779,7 +752,7 @@ const ClosingSlide = ({ total }: { total: number }) => {
           className="font-display-light text-off-white"
           style={{ fontSize: "clamp(2rem, min(7vw, 10svh), 6rem)", lineHeight: 0.95 }}
         >
-          Calendário pronto.
+          Junho fechado.
         </motion.h2>
 
         <motion.h2
@@ -790,7 +763,7 @@ const ClosingSlide = ({ total }: { total: number }) => {
           className="font-display-light text-mineral mt-1"
           style={{ fontSize: "clamp(2rem, min(7vw, 10svh), 6rem)", lineHeight: 0.95 }}
         >
-          Pronto para publicar.
+          Aprovação e produção a seguir.
         </motion.h2>
 
         <motion.div
