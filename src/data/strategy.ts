@@ -324,8 +324,8 @@ export const publications: Publication[] = [
     date: "02/06",
     weekday: "Terça-feira",
     week: 1,
-    title: "O elevador não é intervalo",
-    hook: "O elevador não é intervalo. É parte da rotina.",
+    title: "A rotina passa pelo elevador",
+    hook: "Várias vezes por dia, o mesmo público passa pela mesma tela.",
     pillar: "Presença onde a rotina acontece",
     audience: "Marcas e Agências",
     format: "Post Estático",
@@ -336,8 +336,8 @@ export const publications: Publication[] = [
       kind: "static",
       visual:
         "Fundo escuro com textura arquitetônica sutil (painel de elevador ou corredor de lobby). Tipografia grande, branca e âmbar. Sem excesso de elementos. Logo Focus Media no canto inferior.",
-      artwork: "O elevador não é intervalo.\nÉ parte da rotina.",
-      artworkSupport: "Sua marca presente onde o público já está.",
+      artwork: "Várias vezes por dia,\no mesmo público\npassa pela mesma tela.",
+      artworkSupport: "Frequência real, dentro do ambiente certo.",
       caption:
         "Entre a entrada e o andar de destino, existem alguns segundos. Não de espera — de presença.\n\nO elevador de um condomínio residencial ou corporativo não é um espaço vazio. É um ponto de circulação recorrente, onde o mesmo público passa várias vezes ao dia, ao longo de semanas e meses.\n\nMídia que aparece nesse contexto não interrompe: ela acompanha.\n\nConheça as soluções da Focus Media e planeje a presença da sua marca onde a rotina acontece.",
       cta: "Acesse focusmedia.com.br e fale com nossa equipe.",
